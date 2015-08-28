@@ -234,6 +234,7 @@ $(function() {
         type: 'select',
         action: 'element_attribute',
         live_update: true,
+        show_empty: true,
         options: [
           {key: 'load', name: 'Load'},
           {key: 'click', name: 'Click'},
