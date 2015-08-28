@@ -214,6 +214,28 @@ $(function() {
     };
     f.addComponentType(everything);
 
+    function refreshThePage ($el, propName) {
+      var tempArr = propName.split('-');
+      var i = parseInt(tempArr[tempArr.length-1]);
+
+      var pgel = new pgQuery($el.data);
+      var page = pinegrow.getSelectedPage();
+
+      var trigger = pgel.attr('data-animation-trigger-' + i);
+
+      if (trigger && trigger == "scroll") {
+        var dir = pgel.attr('data-animation-scroll-direction-'+i);
+        var tar = pgel.attr('data-animation-target-'+i);
+        var off = pgel.attr('data-animation-offset-'+i);
+        if (dir && tar && off) {
+          page.refresh();
+        }
+      }
+      else if (trigger) {
+        page.refresh();
+      }
+    }
+
     var componentsArray = [];
     for (var i = 1; i <= 4; i++) {
       var a = new PgComponentType('animation-'+i, 'Animation ' + i);
@@ -225,10 +247,10 @@ $(function() {
         fields: {}
       }
       var fields = a.sections['animation-'+i]['fields'];
-      fields['animation.general-section-label-'+i] = {
-        type : 'label',
-        name : 'General'
-      };
+      // fields['animation.general-section-label-'+i] = {
+      //   type : 'label',
+      //   name : 'General'
+      // };
       fields['animation.trigger-'+i] = {
         name: 'Animation trigger',
         type: 'select',
@@ -241,7 +263,10 @@ $(function() {
           {key: 'hover', name: 'Hover'},
           {key: 'scroll', name: 'Scroll'}
         ],
-        attribute : 'data-animation-trigger-' + i
+        attribute : 'data-animation-trigger-' + i,
+        on_changed : function ($el, page) {
+          refreshThePage($el, page);
+        }
       }
 
       fields['animation.animation-type-'+i] = {
@@ -251,7 +276,10 @@ $(function() {
         show_empty: true,
         options: animationOptions,
         action: 'element_attribute',
-        attribute : 'data-animation-type-' + i
+        attribute : 'data-animation-type-' + i,
+        on_changed : function ($el, page) {
+          refreshThePage($el, page);
+        }
       };
       fields['animation-one.animation-to-remove-'+i] = {
         type : 'select',
@@ -260,7 +288,10 @@ $(function() {
         show_empty: true,
         options: animationOptions,
         action: 'element_attribute',
-        attribute : 'data-animation-to-remove-' + i
+        attribute : 'data-animation-to-remove-' + i,
+        on_changed : function ($el, page) {
+          refreshThePage($el, page);
+        }
       }
 
       a.sections['animation.scroll-'+i] = {
@@ -268,10 +299,10 @@ $(function() {
         fields: {}
       };
       fields = a.sections['animation.scroll-'+i]['fields'];
-      fields['animation.scroll-label-'+i] = {
-        type : 'label',
-        name : 'Scroll Properties'
-      };
+      // fields['animation.scroll-label-'+i] = {
+      //   type : 'label',
+      //   name : 'Scroll Properties'
+      // };
       fields['animation.scroll-trigger.direction-'+i] = {
         type : 'select',
         name : 'Scroll direction',
@@ -282,19 +313,30 @@ $(function() {
           {key: 'up', name: 'Up'}
         ],
         action: 'element_attribute',
-        attribute : 'data-animation-scroll-direction-'+i
+        attribute : 'data-animation-scroll-direction-'+i,
+        on_changed : function ($el, page) {
+          refreshThePage($el, page);
+        }
       };
       fields['animation.scroll-trigger.target-'+i] = {
         type : 'text',
+        live_update: false,
         name : 'Scroll target',
         action: 'element_attribute',
-        attribute : 'data-animation-target-'+i
+        attribute : 'data-animation-target-'+i,
+        on_changed : function ($el, page) {
+          refreshThePage($el, page);
+        }
       };
       fields['animation.scroll-trigger.offset-'+i] = {
         type : 'text',
+        live_update: false,
         name : 'Scroll offset',
         action: 'element_attribute',
-        attribute : 'data-animation-offset-'+i
+        attribute : 'data-animation-offset-'+i,
+        on_changed : function ($el, page) {
+          refreshThePage($el, page);
+        }
       };
 
       componentsArray[i-1] = a;
