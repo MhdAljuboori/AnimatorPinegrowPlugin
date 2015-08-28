@@ -300,33 +300,6 @@ $(function() {
       componentsArray[i-1] = a;
     }
 
-    function setTrigger (pgel, trigger, value, index) {
-      s = pgel;
-      if(value) {
-        if (pgel.attr('data-animation-trigger-'+index))
-          pgel.attr('data-animation-trigger-'+index, pgel.attr('data-animation-trigger-'+index) + " " + trigger);
-        else
-          pgel.attr('data-animation-trigger-'+index, trigger);
-        // showNotice('You also need to add JavaScript to initialize Tooltips. <a class="link external" target="_blank" href="http://getbootstrap.com/javascript/#tooltips">Read more about it.</a>', 'Notice', 'bs-tooltip-notice');
-      } else {
-        if (pgel.attr('data-animation-trigger-'+index)) {
-          var triggerArr = pgel.attr('data-animation-trigger-'+index).split(' ');
-          if (triggerArr.indexOf(trigger) != -1) {
-            triggerArr.splice(triggerArr.indexOf(trigger), 1);
-            pgel.attr('data-animation-trigger-'+index, triggerArr.join(' '));
-          }
-        }
-      }
-    }
-
-    function getTrigger (pgel, trigger, index) {
-      if (pgel.attr('data-animation-trigger-'+index))
-        return pgel.attr('data-animation-trigger-'+index).split(' ').indexOf(trigger) == -1;
-      else
-        return 1;
-    }
-
-
     //Tell Pinegrow about the framework
     pinegrow.addFramework(f);
 
