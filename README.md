@@ -12,6 +12,27 @@ Usage
 
 Full guide [here](http://pinegrow.com/docs/guides/kelvin-pine/index.html) for kelvin plugin.
 
+After activating the plugin, you will notice that new property appear in the `PROP` panel (Animation Settings) this property will give you the opportunity to change the animation duration, the animation delay and the animation itration.
+
+![Animation Settings](https://raw.githubusercontent.com/MhdAljuboori/AnimatorPinegrowPlugin/master/screenshots/animation-settings.png)
+
+Also you'll notice a new actions in `WP` panel under Animations, you'll find four animations settings.
+
+![Animation Actions](https://raw.githubusercontent.com/MhdAljuboori/AnimatorPinegrowPlugin/master/screenshots/animation-actions.png)
+
+When you activate an animation action from th `WP` panel, you'll see there are some fields you have to fill them out
+
+* *Animation trigger* is when you want to trigger the animation, you can trigger it on load (when the document ready), click, hover and scroll.
+* *Animation type* is the animation that will run when the trigger happend.
+* *Animation to remove* is the animation that will removed from the element when the trigger happend.
+
+The second is working only if you choosed scroll as your trigger.
+
+* *Scroll direction* means if the user is scrolling down or up.
+* *Scroll target* when the scroll event happend which element you want to effect.
+* *Scroll offset* the offset between the element and the top.
+
+
 MIT LICENSE
 ===========
 
