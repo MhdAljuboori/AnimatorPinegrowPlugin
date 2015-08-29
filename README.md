@@ -44,7 +44,7 @@ Quick Tutorial
 
 ![Navbar Animation](https://raw.githubusercontent.com/MhdAljuboori/AnimatorPinegrowPlugin/master/screenshots/navbar-animation.png)
 
-[Here](https://github.com/MhdAljuboori/AnimatorPinegrowPlugin/tree/master/example) is small example of using the Animator plugin
+[Here](https://github.com/MhdAljuboori/AnimatorPinegrowPlugin/tree/master/example) is a small example of using the Animator plugin
 
 MIT LICENSE
 ===========
