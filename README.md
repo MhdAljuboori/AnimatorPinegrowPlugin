@@ -1,7 +1,7 @@
 # Animator Plugin for Pinegrow Web Editor
 [Pinegrow Web Editor](http://pinegrow.com/) is a desktop app that lets you build responsive websites faster with live multi-page editing, CSS styling and smart components for Bootstrap, Foundation, AngularJS and WordPress.
 
-The plugin is using [Animate.css](https://github.com/daneden/animate.css) and [Waypints](http://imakewebthings.com/waypoints)
+The plugin is using [Animate.css](https://github.com/daneden/animate.css) and [Waypoints](http://imakewebthings.com/waypoints)
 
 Usage
 =====
