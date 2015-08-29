@@ -42,6 +42,8 @@ Quick Tutorial
 * Settign the trigger on click, the effect will happend when the user click the element, like setting `shake` animation to the button.
 * By setting the trigger on scroll, you'll have to full the second section **Scroll direction**, **Scroll target** and **Scroll offset**, so if you want to show the navbar after the user scroll down 500px, you have to add the animation to your `hero-unit`/`jumbotron`, select scroll as a trigger, setting the animation type (`slideInDown`) then by going to the second section you'll set, the scroll direction (`Down`) the scroll target which is your navbar (`.navbar`) finally the offset (`-500px`).
 
+![Navbar Animation](https://raw.githubusercontent.com/MhdAljuboori/AnimatorPinegrowPlugin/master/screenshots/navbar-animation.png)
+
 [Here](https://github.com/MhdAljuboori/AnimatorPinegrowPlugin/tree/master/example) is small example of using the Animator plugin
 
 MIT LICENSE
