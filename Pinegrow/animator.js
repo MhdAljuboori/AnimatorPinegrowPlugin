@@ -228,11 +228,20 @@ $(function() {
         var tar = pgel.attr('data-animation-target-'+i);
         var off = pgel.attr('data-animation-offset-'+i);
         if (dir && tar && off) {
-          page.refresh();
+
+          var toAdd = pgel.attr('data-animation-type-' + i);
+          var toRemove = pgel.attr('data-animation-to-remove-' + i);
+
+          if (toAdd || toRemove)
+            page.refresh();
         }
       }
       else if (trigger) {
-        page.refresh();
+        var toAdd = pgel.attr('data-animation-type-' + i);
+        var toRemove = pgel.attr('data-animation-to-remove-' + i);
+
+        if (toAdd || toRemove)
+          page.refresh();
       }
     }
 
