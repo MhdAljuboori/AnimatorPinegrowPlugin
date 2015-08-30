@@ -256,10 +256,12 @@ $(function() {
         fields: {}
       }
       var fields = a.sections['animation-'+i]['fields'];
-      // fields['animation.general-section-label-'+i] = {
-      //   type : 'label',
-      //   name : 'General'
-      // };
+      fields['animation.general-section-label-'+i] = {
+        type : 'label',
+        name : 'General',
+        action : "element_attribute",
+        attribute: 'general-section-label-'+i
+      };
       fields['animation.trigger-'+i] = {
         name: 'Animation trigger',
         type: 'select',
@@ -308,10 +310,12 @@ $(function() {
         fields: {}
       };
       fields = a.sections['animation.scroll-'+i]['fields'];
-      // fields['animation.scroll-label-'+i] = {
-      //   type : 'label',
-      //   name : 'Scroll Properties'
-      // };
+      fields['animation.scroll-label-'+i] = {
+        type : 'label',
+        name : 'Scroll Properties',
+        action : "element_attribute",
+        attribute: 'scroll-section-label-'+i
+      };
       fields['animation.scroll-trigger.direction-'+i] = {
         type : 'select',
         name : 'Scroll direction',
