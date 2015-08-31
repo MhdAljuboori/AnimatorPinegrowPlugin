@@ -102,8 +102,8 @@ $(function() {
       var elmStyle = pgel.attr('style');
 
       if (elmStyle) {
-        var ie = new RegExp(animationSettings+"\\:\\s*([0-9]*\\.?[0-9]+m?s);", "i");
-        var webkit = new RegExp("-webkit-"+animationSettings+"\\:\\s*([0-9]*\\.?[0-9]+m?s);", "i");
+        var ie = new RegExp(animationSettings+"\\:\\s*([0-9]*\\.?[0-9]+m?s?);", "i");
+        var webkit = new RegExp("-webkit-"+animationSettings+"\\:\\s*([0-9]*\\.?[0-9]+m?s?);", "i");
 
         if (elmStyle.match(ie)) {
           if (value)
@@ -133,7 +133,7 @@ $(function() {
     function getAnimationStyleValue (pgel, animationSettings) {
       var elmStyle = pgel.attr('style');
       if (elmStyle) {
-        var ie = new RegExp(animationSettings+"\\:\\s*([0-9]*\\.?[0-9]+m?s);", "i");
+        var ie = new RegExp(animationSettings+"\\:\\s*([0-9]*\\.?[0-9]+m?s?);", "i");
 
         var matched = elmStyle.match(ie);
         if (matched)
