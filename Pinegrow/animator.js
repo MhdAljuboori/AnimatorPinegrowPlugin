@@ -95,7 +95,7 @@ $(function() {
 
     //Auto detect if font-awesome css is included
     f.detect = function(pgPage) {
-      return pgPage.hasScript(/animator/);
+      return pgPage.hasScript(/animator.js/);
     }
 
     function updateAnimationStyle (pgel, animationSettings, value) {
@@ -374,7 +374,7 @@ $(function() {
       if(!f.detect(pgPage)) {
         //FA CSS is not included
         var animator_url = "https://cdn.rawgit.com/MhdAljuboori/6ea3a3fa48248e3a132a/raw/animator.js";
-        pgPage.addScript(animator_url);
+        pgPage.addScript(animator_url, true);
         pinegrow.showQuickMessage('Animator JS was added to the page');
 
         var animate_css = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css";
@@ -385,7 +385,7 @@ $(function() {
 
         var waypoints_url = "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js";
         pinegrow.showAlert('<p>Looks like that <b>Waypoints</b> is not included on the page.</p><p>Do you want to add Waypoints CDN javascript file to the page?</p><p><code>&lt;script type="text/javascript" src="' + waypoints_url + '"&gt;&lt;/script&gt;</code></p><p>You can also use <b>Page -&gt; Manage stylesheets</b> to manually include local or remote JS file.</p>', "Add Waypoints", "Don\'t add it", "Add the JS", null, function() {
-          pgPage.addScript(waypoints_url);
+          pgPage.addScript(waypoints_url, true);
           pinegrow.showQuickMessage('Waypoints was added to the page');
         });
       }
