@@ -3,6 +3,8 @@
 
 The plugin is using [Animate.css](https://github.com/daneden/animate.css) and [Waypoints](http://imakewebthings.com/waypoints)
 
+You also can buy the PRO version from [here](http://animator-pro.mhdaljuboori.me/) ([AnimatorPro](http://animator-pro.mhdaljuboori.me/))
+
 Usage
 =====
 [Download](https://github.com/MhdAljuboori/AnimatorPinegrowPlugin/archive/master.zip) the plugin, then open Pinegrow
@@ -16,11 +18,11 @@ After activating the plugin, you will notice that new property appear in the `PR
 
 ![Animation Settings](https://raw.githubusercontent.com/MhdAljuboori/AnimatorPinegrowPlugin/master/screenshots/animation-settings.png)
 
-Also you'll notice a new actions in `WP` panel under Animations, you'll find four animations settings.
+Also you'll notice a new actions in `WP` panel under Animations (it's now under ACT panel for PG 2.3+), you'll find four animations settings.
 
 ![Animation Actions](https://raw.githubusercontent.com/MhdAljuboori/AnimatorPinegrowPlugin/master/screenshots/animation-actions.png)
 
-When you activate an animation action from th `WP` panel, you'll see there are some fields you have to fill them out
+When you activate an animation action from the `WP` panel, you'll see there are some fields you have to fill them out
 
 * *Animation trigger* is when you want to trigger the animation, you can trigger it on load (when the document ready), click, hover and scroll.
 * *Animation type* is the animation that will run when the trigger happend.
