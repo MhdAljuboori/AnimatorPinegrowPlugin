@@ -3,7 +3,7 @@
 
 The plugin is using [Animate.css](https://github.com/daneden/animate.css) and [Waypoints](http://imakewebthings.com/waypoints)
 
-You also can buy the PRO version from [here](http://animator-pro.mhdaljuboori.me/) ([AnimatorPro](http://animator-pro.mhdaljuboori.me/))
+You also can buy the PRO version from [here](http://animator-pro.mhdaljuboori.me?ref=github) ([AnimatorPro](http://animator-pro.mhdaljuboori.me?ref=github))
 
 Usage
 =====
