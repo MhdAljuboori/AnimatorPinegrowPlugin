@@ -39,7 +39,7 @@ The second is working only if you choosed scroll as your trigger.
 Quick Tutorial
 ==============
 
-* Setting the trigger on load and adding animation type like `fadeInDown`, when the the document is ready you'll see the element you've selected appear (top to down).
+* Setting the trigger on load and adding animation type like `fadeInDown`, when the document is ready you'll see the element you've selected appear (top to down).
 * Setting the trigger on hover, will effect on element the same way load effect but when you hover the element.
 * Settign the trigger on click, the effect will happend when the user click the element, like setting `shake` animation to the button.
 * By setting the trigger on scroll, you'll have to full the second section **Scroll direction**, **Scroll target** and **Scroll offset**, so if you want to show the navbar after the user scroll down 500px, you have to add the animation to your `hero-unit`/`jumbotron`, select scroll as a trigger, setting the animation type (`slideInDown`) then by going to the second section you'll set, the scroll direction (`Down`) the scroll target which is your navbar (`.navbar`) finally the offset (`-500px`).
